@@ -1,8 +1,8 @@
 // SomeComponent.js
 import React, { useEffect, useState } from 'react';
-import { fetchData } from './requests';
+import { fetchData } from './FirstTask';
 
-const SomeComponent = () => {
+const FirstTaskComponent = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -31,11 +31,11 @@ const SomeComponent = () => {
 
   return (
     <div>
-      <h1>API 데이터</h1>
+      <h1>서울시 강남구 전자도서관 도서 목록</h1>
       <ul>
         {data.map((item, index) => (
           <li key={index}>
-            {item.제작사} - {item.차명} - {item.리콜사유}
+            {item.도서명} - {item.저자명}
           </li>
         ))}
       </ul>
@@ -43,4 +43,4 @@ const SomeComponent = () => {
   );
 };
 
-export default SomeComponent;
+export default FirstTaskComponent;
